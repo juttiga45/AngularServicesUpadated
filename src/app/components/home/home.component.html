@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <h4 style="text-align: center">Directives</h4>
+  <div class="row col-xs-12">
+    <h5>structural</h5>
+    <div class="data" *ngIf="isBoolean; else otherBlockContent">
+      Ngif is true
+    </div>
+    <ng-template #otherBlockContent>
+      <h1>Ngif is false</h1>
+    </ng-template>
+
+    <h1>attribute directive</h1>
+    <p [ngClass]="{ classOne: colorGrey, classTwo: colorRed }">
+      ngclass paragraph
+    </p>
+    <button (click)="toggle()">toggle</button>
+
+    <p [ngStyle]="{ 'font-s tyle': style, 'font-size': font }">
+      ngstyle paragraph
+    </p>
+  </div>
+</div>
